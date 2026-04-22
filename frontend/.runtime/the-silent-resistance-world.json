@@ -1,0 +1,4037 @@
+{
+  "day": 1,
+  "hour": 6,
+  "lastTickAt": 1774672387132,
+  "regions": [
+    {
+      "name": "Kronstadt District",
+      "alertLevel": "guarded",
+      "difficultyModifier": 2,
+      "npcs": [
+        {
+          "id": "kronstadt-district-vanguard_officer-1",
+          "name": "Officer 1-1",
+          "npcType": "vanguard_officer",
+          "region": "Kronstadt District",
+          "rank": "Deputy Officer",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 7,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 8,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 9,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 10,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 11,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 12,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 14,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 15,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 16,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 17,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 18,
+              "location": "district_command",
+              "action": "debrief"
+            },
+            {
+              "time": 19,
+              "location": "district_command",
+              "action": "debrief"
+            },
+            {
+              "time": 20,
+              "location": "district_command",
+              "action": "debrief"
+            },
+            {
+              "time": 21,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 22,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 23,
+              "location": "officer_quarters",
+              "action": "private_review"
+            }
+          ],
+          "currentLocation": "officers_mess",
+          "currentAction": "briefing",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-vanguard_officer-2",
+          "name": "Officer 1-2",
+          "npcType": "vanguard_officer",
+          "region": "Kronstadt District",
+          "rank": "Deputy Officer",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 7,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 8,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 9,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 10,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 11,
+              "location": "checkpoint_north",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 12,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 14,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 15,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 16,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 17,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 18,
+              "location": "district_command",
+              "action": "debrief"
+            },
+            {
+              "time": 19,
+              "location": "district_command",
+              "action": "debrief"
+            },
+            {
+              "time": 20,
+              "location": "district_command",
+              "action": "debrief"
+            },
+            {
+              "time": 21,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 22,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 23,
+              "location": "officer_quarters",
+              "action": "private_review"
+            }
+          ],
+          "currentLocation": "officers_mess",
+          "currentAction": "briefing",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-civilian_worker-1",
+          "name": "Worker 1-1",
+          "npcType": "civilian_worker",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "tenement_row",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "tenement_row",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-civilian_worker-2",
+          "name": "Worker 1-2",
+          "npcType": "civilian_worker",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "tenement_row",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "tenement_row",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-civilian_worker-3",
+          "name": "Worker 1-3",
+          "npcType": "civilian_worker",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "tenement_row",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "tenement_row",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-civilian_worker-4",
+          "name": "Worker 1-4",
+          "npcType": "civilian_worker",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "tenement_row",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "munitions_factory",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "tenement_row",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "canteen_square",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "tenement_row",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "tenement_row",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "tenement_row",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-vanguard_technician-1",
+          "name": "Technician 1-1",
+          "npcType": "vanguard_technician",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 7,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 8,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 9,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 10,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 11,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 14,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 15,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 16,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 17,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 18,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 19,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 20,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "maintenance_lockers",
+          "currentAction": "prep_shift",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-vanguard_technician-2",
+          "name": "Technician 1-2",
+          "npcType": "vanguard_technician",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 7,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 8,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 9,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 10,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 11,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 14,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 15,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 16,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 17,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 18,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 19,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 20,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "maintenance_lockers",
+          "currentAction": "prep_shift",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-enforcer-1",
+          "name": "Enforcer 1-1",
+          "npcType": "enforcer",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 6,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 7,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 8,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 9,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 10,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 11,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 12,
+              "location": "garrison_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 14,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 15,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 16,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 17,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 18,
+              "location": "district_command",
+              "action": "escort_detail"
+            },
+            {
+              "time": 19,
+              "location": "district_command",
+              "action": "escort_detail"
+            },
+            {
+              "time": 20,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 21,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 22,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 23,
+              "location": "barracks",
+              "action": "standby"
+            }
+          ],
+          "currentLocation": "armory",
+          "currentAction": "gear_check",
+          "isHighCommand": false
+        },
+        {
+          "id": "kronstadt-district-enforcer-2",
+          "name": "Enforcer 1-2",
+          "npcType": "enforcer",
+          "region": "Kronstadt District",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 6,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 7,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 8,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 9,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 10,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 11,
+              "location": "checkpoint_north",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 12,
+              "location": "garrison_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 14,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 15,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 16,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 17,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 18,
+              "location": "district_command",
+              "action": "escort_detail"
+            },
+            {
+              "time": 19,
+              "location": "district_command",
+              "action": "escort_detail"
+            },
+            {
+              "time": 20,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 21,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 22,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 23,
+              "location": "barracks",
+              "action": "standby"
+            }
+          ],
+          "currentLocation": "armory",
+          "currentAction": "gear_check",
+          "isHighCommand": false
+        }
+      ]
+    },
+    {
+      "name": "Harbor Facility",
+      "alertLevel": "guarded",
+      "difficultyModifier": 4,
+      "npcs": [
+        {
+          "id": "harbor-facility-vanguard_officer-1",
+          "name": "Officer 2-1",
+          "npcType": "vanguard_officer",
+          "region": "Harbor Facility",
+          "rank": "Acting Harbor Security Prefect",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 7,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 8,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 9,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 10,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 11,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 12,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 14,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 15,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 16,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 17,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 18,
+              "location": "harbor_office",
+              "action": "debrief"
+            },
+            {
+              "time": 19,
+              "location": "harbor_office",
+              "action": "debrief"
+            },
+            {
+              "time": 20,
+              "location": "harbor_office",
+              "action": "debrief"
+            },
+            {
+              "time": 21,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 22,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 23,
+              "location": "officer_quarters",
+              "action": "private_review"
+            }
+          ],
+          "currentLocation": "officers_mess",
+          "currentAction": "briefing",
+          "isHighCommand": true
+        },
+        {
+          "id": "harbor-facility-vanguard_officer-2",
+          "name": "Officer 2-2",
+          "npcType": "vanguard_officer",
+          "region": "Harbor Facility",
+          "rank": "Deputy Officer",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 7,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 8,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 9,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 10,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 11,
+              "location": "customs_gate",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 12,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 14,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 15,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 16,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 17,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 18,
+              "location": "harbor_office",
+              "action": "debrief"
+            },
+            {
+              "time": 19,
+              "location": "harbor_office",
+              "action": "debrief"
+            },
+            {
+              "time": 20,
+              "location": "harbor_office",
+              "action": "debrief"
+            },
+            {
+              "time": 21,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 22,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 23,
+              "location": "officer_quarters",
+              "action": "private_review"
+            }
+          ],
+          "currentLocation": "officers_mess",
+          "currentAction": "briefing",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-civilian_worker-1",
+          "name": "Worker 2-1",
+          "npcType": "civilian_worker",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "dockside_barracks",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "dockside_barracks",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-civilian_worker-2",
+          "name": "Worker 2-2",
+          "npcType": "civilian_worker",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "dockside_barracks",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "dockside_barracks",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-civilian_worker-3",
+          "name": "Worker 2-3",
+          "npcType": "civilian_worker",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "dockside_barracks",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "dockside_barracks",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-civilian_worker-4",
+          "name": "Worker 2-4",
+          "npcType": "civilian_worker",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "dockside_barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "cargo_pier",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "dockside_barracks",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "smuggler_tavern",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "dockside_barracks",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "dockside_barracks",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "dockside_barracks",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-vanguard_technician-1",
+          "name": "Technician 2-1",
+          "npcType": "vanguard_technician",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 7,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 8,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 9,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 10,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 11,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 14,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 15,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 16,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 17,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 18,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 19,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 20,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "maintenance_lockers",
+          "currentAction": "prep_shift",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-vanguard_technician-2",
+          "name": "Technician 2-2",
+          "npcType": "vanguard_technician",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 7,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 8,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 9,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 10,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 11,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 14,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 15,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 16,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 17,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 18,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 19,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 20,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "maintenance_lockers",
+          "currentAction": "prep_shift",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-enforcer-1",
+          "name": "Enforcer 2-1",
+          "npcType": "enforcer",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 6,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 7,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 8,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 9,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 10,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 11,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 12,
+              "location": "garrison_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 14,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 15,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 16,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 17,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 18,
+              "location": "harbor_office",
+              "action": "escort_detail"
+            },
+            {
+              "time": 19,
+              "location": "harbor_office",
+              "action": "escort_detail"
+            },
+            {
+              "time": 20,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 21,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 22,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 23,
+              "location": "barracks",
+              "action": "standby"
+            }
+          ],
+          "currentLocation": "armory",
+          "currentAction": "gear_check",
+          "isHighCommand": false
+        },
+        {
+          "id": "harbor-facility-enforcer-2",
+          "name": "Enforcer 2-2",
+          "npcType": "enforcer",
+          "region": "Harbor Facility",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 6,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 7,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 8,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 9,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 10,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 11,
+              "location": "customs_gate",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 12,
+              "location": "garrison_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 14,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 15,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 16,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 17,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 18,
+              "location": "harbor_office",
+              "action": "escort_detail"
+            },
+            {
+              "time": 19,
+              "location": "harbor_office",
+              "action": "escort_detail"
+            },
+            {
+              "time": 20,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 21,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 22,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 23,
+              "location": "barracks",
+              "action": "standby"
+            }
+          ],
+          "currentLocation": "armory",
+          "currentAction": "gear_check",
+          "isHighCommand": false
+        }
+      ]
+    },
+    {
+      "name": "Vanguard HQ",
+      "alertLevel": "guarded",
+      "difficultyModifier": 4,
+      "npcs": [
+        {
+          "id": "vanguard-hq-vanguard_officer-1",
+          "name": "Officer 3-1",
+          "npcType": "vanguard_officer",
+          "region": "Vanguard HQ",
+          "rank": "Deputy Officer",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 7,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 8,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 9,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 10,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 11,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 12,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 14,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 15,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 16,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 17,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 18,
+              "location": "high_command_wing",
+              "action": "debrief"
+            },
+            {
+              "time": 19,
+              "location": "high_command_wing",
+              "action": "debrief"
+            },
+            {
+              "time": 20,
+              "location": "high_command_wing",
+              "action": "debrief"
+            },
+            {
+              "time": 21,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 22,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 23,
+              "location": "officer_quarters",
+              "action": "private_review"
+            }
+          ],
+          "currentLocation": "officers_mess",
+          "currentAction": "briefing",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-vanguard_officer-2",
+          "name": "Officer 3-2",
+          "npcType": "vanguard_officer",
+          "region": "Vanguard HQ",
+          "rank": "Deputy Officer",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "officer_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 7,
+              "location": "officers_mess",
+              "action": "briefing"
+            },
+            {
+              "time": 8,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 9,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 10,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 11,
+              "location": "atrium_checkpoint",
+              "action": "patrol_route_A"
+            },
+            {
+              "time": 12,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "officers_mess",
+              "action": "meal"
+            },
+            {
+              "time": 14,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 15,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 16,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 17,
+              "location": "inspection_corridor",
+              "action": "inspection"
+            },
+            {
+              "time": 18,
+              "location": "high_command_wing",
+              "action": "debrief"
+            },
+            {
+              "time": 19,
+              "location": "high_command_wing",
+              "action": "debrief"
+            },
+            {
+              "time": 20,
+              "location": "high_command_wing",
+              "action": "debrief"
+            },
+            {
+              "time": 21,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 22,
+              "location": "officer_quarters",
+              "action": "private_review"
+            },
+            {
+              "time": 23,
+              "location": "officer_quarters",
+              "action": "private_review"
+            }
+          ],
+          "currentLocation": "officers_mess",
+          "currentAction": "briefing",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-civilian_worker-1",
+          "name": "Worker 3-1",
+          "npcType": "civilian_worker",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "service_quarters",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-civilian_worker-2",
+          "name": "Worker 3-2",
+          "npcType": "civilian_worker",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "service_quarters",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-civilian_worker-3",
+          "name": "Worker 3-3",
+          "npcType": "civilian_worker",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "service_quarters",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-civilian_worker-4",
+          "name": "Worker 3-4",
+          "npcType": "civilian_worker",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 7,
+              "location": "tram_queue",
+              "action": "commute"
+            },
+            {
+              "time": 8,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 9,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 10,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 11,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 14,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 15,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 16,
+              "location": "records_annex",
+              "action": "shift_work"
+            },
+            {
+              "time": 17,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 18,
+              "location": "service_quarters",
+              "action": "return_home"
+            },
+            {
+              "time": 19,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 20,
+              "location": "officers_mess",
+              "action": "socialize"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "service_quarters",
+          "currentAction": "sleep",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-vanguard_technician-1",
+          "name": "Technician 3-1",
+          "npcType": "vanguard_technician",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 7,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 8,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 9,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 10,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 11,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 14,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 15,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 16,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 17,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 18,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 19,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 20,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "maintenance_lockers",
+          "currentAction": "prep_shift",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-vanguard_technician-2",
+          "name": "Technician 3-2",
+          "npcType": "vanguard_technician",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "service_quarters",
+              "action": "sleep"
+            },
+            {
+              "time": 6,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 7,
+              "location": "maintenance_lockers",
+              "action": "prep_shift"
+            },
+            {
+              "time": 8,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 9,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 10,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 11,
+              "location": "generator_bay",
+              "action": "systems_check"
+            },
+            {
+              "time": 12,
+              "location": "canteen",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 14,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 15,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 16,
+              "location": "comms_corridor",
+              "action": "repair_cycle"
+            },
+            {
+              "time": 17,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 18,
+              "location": "tool_crib",
+              "action": "inventory"
+            },
+            {
+              "time": 19,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 20,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 21,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 22,
+              "location": "service_quarters",
+              "action": "rest"
+            },
+            {
+              "time": 23,
+              "location": "service_quarters",
+              "action": "rest"
+            }
+          ],
+          "currentLocation": "maintenance_lockers",
+          "currentAction": "prep_shift",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-enforcer-1",
+          "name": "Enforcer 3-1",
+          "npcType": "enforcer",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 6,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 7,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 8,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 9,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 10,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 11,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 12,
+              "location": "garrison_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 14,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 15,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 16,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 17,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 18,
+              "location": "high_command_wing",
+              "action": "escort_detail"
+            },
+            {
+              "time": 19,
+              "location": "high_command_wing",
+              "action": "escort_detail"
+            },
+            {
+              "time": 20,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 21,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 22,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 23,
+              "location": "barracks",
+              "action": "standby"
+            }
+          ],
+          "currentLocation": "armory",
+          "currentAction": "gear_check",
+          "isHighCommand": false
+        },
+        {
+          "id": "vanguard-hq-enforcer-2",
+          "name": "Enforcer 3-2",
+          "npcType": "enforcer",
+          "region": "Vanguard HQ",
+          "rank": "Field Asset",
+          "schedule": [
+            {
+              "time": 0,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 1,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 2,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 3,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 4,
+              "location": "barracks",
+              "action": "sleep"
+            },
+            {
+              "time": 5,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 6,
+              "location": "armory",
+              "action": "gear_check"
+            },
+            {
+              "time": 7,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 8,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 9,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 10,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 11,
+              "location": "atrium_checkpoint",
+              "action": "checkpoint_sweep"
+            },
+            {
+              "time": 12,
+              "location": "garrison_mess",
+              "action": "meal"
+            },
+            {
+              "time": 13,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 14,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 15,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 16,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 17,
+              "location": "patrol_route_B",
+              "action": "security_patrol"
+            },
+            {
+              "time": 18,
+              "location": "high_command_wing",
+              "action": "escort_detail"
+            },
+            {
+              "time": 19,
+              "location": "high_command_wing",
+              "action": "escort_detail"
+            },
+            {
+              "time": 20,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 21,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 22,
+              "location": "barracks",
+              "action": "standby"
+            },
+            {
+              "time": 23,
+              "location": "barracks",
+              "action": "standby"
+            }
+          ],
+          "currentLocation": "armory",
+          "currentAction": "gear_check",
+          "isHighCommand": false
+        }
+      ]
+    }
+  ],
+  "highCommand": [
+    {
+      "id": "hc-1",
+      "name": "Marshal Ansel Krell",
+      "rank": "Supreme Interior Director",
+      "region": "Vanguard HQ",
+      "difficultyModifier": 5,
+      "isAlive": true
+    },
+    {
+      "id": "hc-2",
+      "name": "Commandant Ilse Voss",
+      "rank": "Harbor Security Prefect",
+      "region": "Harbor Facility",
+      "difficultyModifier": 4,
+      "isAlive": false,
+      "replaced": true
+    },
+    {
+      "id": "hc-3",
+      "name": "Director Otto Mahr",
+      "rank": "Industrial Discipline Chief",
+      "region": "Kronstadt District",
+      "difficultyModifier": 3,
+      "isAlive": true
+    },
+    {
+      "id": "hc-harbor-facility-vanguard_officer-1",
+      "name": "Officer 2-1",
+      "rank": "Acting Harbor Security Prefect",
+      "region": "Harbor Facility",
+      "difficultyModifier": 4,
+      "isAlive": true
+    }
+  ],
+  "newsFeed": [
+    {
+      "id": "elimination-hc-2-1774672387132",
+      "type": "intercepted memo",
+      "text": "An encrypted bulletin confirms a senior Vanguard official has vanished under suspicious circumstances.",
+      "timestamp": "Day 1 06:00"
+    },
+    {
+      "id": "seed-1",
+      "type": "intercepted memo",
+      "text": "Vanguard logistics requests additional patrol units near harbor manifests.",
+      "timestamp": "Day 1 06:00"
+    }
+  ]
+}

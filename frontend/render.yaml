@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: silent-resistance-ops-20260402a
+    env: node
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start

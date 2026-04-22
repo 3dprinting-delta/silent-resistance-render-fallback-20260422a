@@ -1,0 +1,644 @@
+.shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(124, 142, 148, 0.14), transparent 28%),
+    linear-gradient(180deg, #07090b 0%, #0d1214 54%, #050607 100%);
+  color: #ebe4d6;
+  font-family: var(--font-geist-sans, "Segoe UI", sans-serif);
+}
+
+.stageWrap {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.canvas {
+  min-height: 100vh;
+}
+
+.lockPrompt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(213, 214, 206, 0.18);
+  border-radius: 999px;
+  padding: 0.92rem 1.38rem;
+  background: rgba(10, 14, 16, 0.84);
+  color: #f2efe8;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(14px);
+  z-index: 24;
+}
+
+.tintOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 8;
+  background:
+    radial-gradient(circle at center, rgba(24, 31, 34, calc(var(--zone-tint, 0) * 0.12)), transparent 42%),
+    linear-gradient(180deg, rgba(90, 34, 28, calc(var(--zone-tint, 0) * 0.38)) 0%, rgba(12, 18, 20, 0) 48%, rgba(94, 44, 34, calc(var(--zone-tint, 0) * 0.46)) 100%);
+  transition: background 180ms ease, opacity 180ms ease;
+}
+
+.damageOverlay,
+.pressureOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.damageOverlay {
+  background:
+    radial-gradient(circle at center, rgba(0, 0, 0, calc(var(--low-health, 0) * 0.16)), transparent 34%),
+    radial-gradient(circle at center, rgba(142, 48, 38, calc(var(--damage-flash, 0) * 0.22)), transparent 62%),
+    linear-gradient(180deg, rgba(90, 24, 18, calc(var(--damage-flash, 0) * 0.34)) 0%, rgba(0, 0, 0, 0) 28%, rgba(98, 26, 22, calc(var(--damage-flash, 0) * 0.28)) 100%);
+}
+
+.pressureOverlay {
+  background:
+    radial-gradient(circle at center, rgba(177, 163, 142, calc(var(--exhaustion, 0) * 0.08)), transparent 44%),
+    linear-gradient(180deg, rgba(108, 42, 34, calc(var(--attack-pressure, 0) * 0.1)) 0%, rgba(0, 0, 0, 0) 36%, rgba(108, 42, 34, calc(var(--attack-pressure, 0) * 0.12)) 100%);
+}
+
+.tintPressure {
+  box-shadow: inset 0 0 180px rgba(133, 42, 30, 0.18);
+}
+
+.tintSafe {
+  background:
+    radial-gradient(circle at center, rgba(40, 34, 24, calc(var(--zone-tint, 0) * 0.08)), transparent 40%),
+    linear-gradient(180deg, rgba(134, 96, 44, 0.06) 0%, rgba(12, 18, 20, 0) 40%, rgba(120, 86, 40, 0.08) 100%);
+}
+
+.crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: rgba(233, 230, 222, 0.92);
+  box-shadow: 0 0 10px rgba(208, 204, 184, 0.22);
+}
+
+.crosshair::before {
+  width: 2px;
+  height: 20px;
+  left: 9px;
+  top: 0;
+}
+
+.crosshair::after {
+  width: 20px;
+  height: 2px;
+  left: 0;
+  top: 9px;
+}
+
+.crosshairHit::before,
+.crosshairHit::after {
+  background: rgba(255, 230, 198, 1);
+  box-shadow: 0 0 18px rgba(255, 199, 128, 0.5);
+}
+
+.hitMarker {
+  position: absolute;
+  inset: -6px;
+}
+
+.hitMarker::before,
+.hitMarker::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: rgba(255, 212, 168, 0.92);
+}
+
+.hitMarker::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hitMarker::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.topLeft,
+.topRight,
+.leftRail,
+.bottomLeft,
+.bottomCenter,
+.bottomRight,
+.alerts {
+  position: absolute;
+  z-index: 22;
+}
+
+.topLeft {
+  top: 1rem;
+  left: 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.topRight {
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  gap: 0.72rem;
+  width: min(18rem, calc(100vw - 2rem));
+}
+
+.leftRail {
+  top: 6.5rem;
+  left: 1rem;
+  width: min(18rem, calc(100vw - 2rem));
+  display: grid;
+  gap: 0.75rem;
+}
+
+.bottomLeft {
+  left: 1rem;
+  bottom: 1rem;
+  width: min(22rem, calc(100vw - 2rem));
+  display: grid;
+  gap: 0.75rem;
+}
+
+.bottomCenter {
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  width: min(44rem, calc(100vw - 2rem));
+  display: grid;
+  gap: 0.65rem;
+}
+
+.bottomRight {
+  right: 1rem;
+  bottom: 1rem;
+  width: min(18rem, calc(100vw - 2rem));
+  display: grid;
+  gap: 0.72rem;
+}
+
+.alerts {
+  top: 1rem;
+  right: 1rem;
+  width: min(26rem, calc(100vw - 2rem));
+  display: grid;
+  gap: 0.5rem;
+  justify-items: end;
+  padding-top: 10rem;
+}
+
+.brand {
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.subtle {
+  font-size: 0.75rem;
+  color: rgba(223, 218, 205, 0.74);
+}
+
+.location,
+.contextHint,
+.weaponHud,
+.powerHud,
+.survivorHud,
+.dangerCard,
+.baseCard,
+.resourcePanel,
+.eventCard,
+.pulseCard,
+.deathReport,
+.compactStat,
+.alert,
+.actionStrip,
+.buildPanel,
+.warningCard {
+  border: 1px solid rgba(214, 210, 197, 0.12);
+  background: rgba(8, 12, 14, 0.82);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(15px);
+}
+
+.location,
+.contextHint {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.42rem 0.72rem;
+  font-size: 0.71rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.locationOverrun {
+  border-color: rgba(185, 109, 86, 0.32);
+  color: #f2c0ae;
+}
+
+.contextHint {
+  margin-top: 0.2rem;
+  color: rgba(240, 214, 176, 0.92);
+}
+
+.compactStat,
+.dangerCard,
+.baseCard,
+.resourcePanel,
+.eventCard,
+.pulseCard,
+.deathReport,
+.weaponHud,
+.powerHud {
+  border-radius: 1rem;
+  padding: 0.82rem 0.92rem;
+}
+
+.survivorHud {
+  border-radius: 1rem;
+  padding: 0.82rem 0.92rem;
+  border-left: 3px solid rgba(120, 170, 200, 0.24);
+}
+
+.alert,
+.actionStrip,
+.buildPanel,
+.warningCard {
+  border-radius: 0.9rem;
+  padding: 0.82rem 0.96rem;
+}
+
+.cardLabel {
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(209, 207, 197, 0.66);
+}
+
+.cardValue,
+.dangerValue,
+.weaponName,
+.powerValue {
+  margin-top: 0.28rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cardHint {
+  margin-top: 0.34rem;
+  font-size: 0.75rem;
+  color: rgba(224, 218, 207, 0.72);
+  line-height: 1.45;
+}
+
+.compactStatRow,
+.resourceHeader,
+.dangerMeta,
+.powerMeta,
+.districtRow,
+.weaponAmmo {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.compactStatRow {
+  font-size: 0.78rem;
+}
+
+.dangerMeta,
+.powerMeta {
+  margin-top: 0.4rem;
+  font-size: 0.73rem;
+  color: rgba(221, 214, 202, 0.75);
+}
+
+.barTrack {
+  margin-top: 0.48rem;
+  height: 0.42rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.health {
+  background: linear-gradient(90deg, #ab544d 0%, #d68a67 100%);
+}
+
+.stamina {
+  background: linear-gradient(90deg, #66846b 0%, #a5b37b 100%);
+}
+
+.dangerFill {
+  background: linear-gradient(90deg, #7e5b3b 0%, #ca7256 100%);
+}
+
+.loadWarn {
+  background: linear-gradient(90deg, #8a6a4a 0%, #d89b68 100%);
+}
+
+.overburden {
+  background: linear-gradient(90deg, #8c4742 0%, #dc7b64 100%);
+}
+
+.weaponAmmo strong {
+  font-size: 1.8rem;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(255, 214, 156, 0.12);
+}
+
+.weaponAmmo span {
+  font-size: 0.88rem;
+  color: rgba(226, 219, 206, 0.72);
+}
+
+.reloadMeter {
+  margin-top: 0.55rem;
+  height: 0.34rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.reloadFill {
+  height: 100%;
+  background: linear-gradient(90deg, #d5c39a 0%, #f2e4bf 100%);
+  box-shadow: 0 0 12px rgba(242, 228, 191, 0.24);
+}
+
+.cooldownRingWrap {
+  margin-top: 0.55rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cooldownRing {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
+  background:
+    conic-gradient(var(--danger-accent, #d9b67b) calc(var(--cooldown, 0) * 360deg), rgba(255, 255, 255, 0.08) 0deg),
+    radial-gradient(circle at center, rgba(10, 14, 16, 0.96) 56%, transparent 57%);
+  border: 1px solid rgba(221, 216, 203, 0.12);
+}
+
+.baseUnderPressure {
+  border-color: rgba(201, 110, 85, 0.28);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24), 0 0 24px rgba(190, 83, 62, 0.1);
+}
+
+.resourcePanel,
+.pickupFeed {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.resourceHeader {
+  font-size: 0.78rem;
+}
+
+.pressureWarn {
+  color: #f0c98b;
+}
+
+.pressureHigh {
+  color: #e59a8e;
+}
+
+.compactResources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.resourceBadge {
+  display: grid;
+  gap: 0.14rem;
+  min-width: 5.5rem;
+  padding: 0.45rem 0.58rem;
+  border-radius: 0.78rem;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.71rem;
+}
+
+.resourceBadge strong {
+  font-size: 0.82rem;
+}
+
+.pickupFeed {
+  justify-items: start;
+}
+
+.pickupToast {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.62rem 0.78rem;
+  border-radius: 0.82rem;
+  background: rgba(10, 14, 16, 0.82);
+  border: 1px solid rgba(220, 214, 200, 0.1);
+  font-size: 0.76rem;
+  animation: pickupRise 0.28s ease;
+}
+
+.pickupToast strong {
+  font-size: 0.8rem;
+}
+
+.pickupToast span {
+  color: rgba(221, 214, 200, 0.68);
+}
+
+.common {
+  border-color: rgba(196, 192, 180, 0.14);
+}
+
+.uncommon {
+  border-color: rgba(137, 180, 203, 0.22);
+}
+
+.rare {
+  border-color: rgba(219, 187, 116, 0.3);
+}
+
+.actionStrip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 0.74rem;
+  color: rgba(229, 224, 214, 0.84);
+}
+
+.buildPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.75rem;
+}
+
+.buildGood {
+  border-color: rgba(126, 180, 199, 0.24);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24), 0 0 18px rgba(126, 180, 199, 0.08);
+}
+
+.buildBad {
+  border-color: rgba(197, 106, 93, 0.28);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24), 0 0 18px rgba(197, 106, 93, 0.1);
+}
+
+.abilityCue {
+  justify-self: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 196, 159, 0.2);
+  background: rgba(10, 14, 16, 0.88);
+  color: #f0d9ad;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.warningCard {
+  color: #f0d09b;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.remoteTag,
+.baseTag {
+  min-width: 7.4rem;
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.34rem 0.52rem;
+  border-radius: 0.72rem;
+  border: 1px solid rgba(216, 210, 198, 0.14);
+  background: rgba(7, 10, 12, 0.82);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
+  text-align: center;
+}
+
+.remoteTag strong,
+.baseTag strong {
+  font-size: 0.7rem;
+  color: #f2ecdf;
+  line-height: 1.1;
+}
+
+.remoteTag span,
+.baseTag span {
+  font-size: 0.62rem;
+  color: rgba(220, 214, 203, 0.76);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.remoteTagDanger {
+  border-color: rgba(203, 115, 98, 0.26);
+}
+
+.baseTagHot {
+  border-color: rgba(214, 126, 89, 0.28);
+}
+
+.eventCard {
+  border-left: 3px solid rgba(217, 182, 123, 0.26);
+}
+
+.pulseCard {
+  border-left: 3px solid rgba(132, 180, 206, 0.24);
+}
+
+.districtRow {
+  font-size: 0.76rem;
+  margin-top: 0.42rem;
+}
+
+.alert {
+  width: fit-content;
+  max-width: 100%;
+  font-size: 0.76rem;
+  color: rgba(244, 238, 226, 0.88);
+}
+
+@keyframes pickupRise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .topRight,
+  .leftRail,
+  .bottomLeft,
+  .bottomRight {
+    width: min(15rem, calc(100vw - 1rem));
+  }
+}
+
+@media (max-width: 920px) {
+  .topRight,
+  .alerts {
+    right: 0.7rem;
+  }
+
+  .topLeft,
+  .leftRail,
+  .bottomLeft,
+  .bottomRight {
+    left: 0.7rem;
+  }
+
+  .bottomRight {
+    right: 0.7rem;
+    left: auto;
+  }
+
+  .bottomCenter {
+    width: calc(100vw - 1rem);
+    bottom: 4.5rem;
+  }
+
+  .alerts {
+    padding-top: 13rem;
+  }
+}
