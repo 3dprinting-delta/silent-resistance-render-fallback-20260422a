@@ -8,9 +8,14 @@ const PREFERRED_CATALOGS = [
   "baseline_before_internal_print_category_cleanup_20260713_192923.csv",
   "squarespace_527_visual_refresh.csv",
   "squarespace_500_makerworld_update.csv",
+  "ai_custom_flow/data/catalog_seed.csv",
 ];
 
-const PREFERRED_AUDITS = ["final_527_public_image_audit.csv", "public_500_product_verification.csv"];
+const PREFERRED_AUDITS = [
+  "final_527_public_image_audit.csv",
+  "public_500_product_verification.csv",
+  "ai_custom_flow/data/audit_seed.csv",
+];
 
 const STOP_WORDS = new Set([
   "a",

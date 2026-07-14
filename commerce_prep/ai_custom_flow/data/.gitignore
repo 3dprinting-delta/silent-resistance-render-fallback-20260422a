@@ -1,2 +1,4 @@
 *
 !.gitignore
+!catalog_seed.csv
+!audit_seed.csv
