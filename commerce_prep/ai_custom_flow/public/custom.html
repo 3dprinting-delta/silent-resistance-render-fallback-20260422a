@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom 3D Print Design | Aug & Ach</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="custom-hero">
+        <div>
+          <p class="eyebrow">Custom 3D prints</p>
+          <h1>Bring us the idea. We’ll help shape it into a printable piece.</h1>
+          <p class="lede">Start with a sketch, a description, a size, or a gift idea. We’ll review printability before anything becomes a real product.</p>
+          <div class="actions">
+            <a class="button primary" data-starter-link href="https://www.augnach.com/shop/p/custom-design-starter">Pay $5 to start designing</a>
+            <a class="button" data-mail-link href="mailto:375351feng@gmail.com">Contact by Gmail</a>
+          </div>
+        </div>
+        <div class="preview-card">
+          <span>Meshy design preview</span>
+          <strong>Idea → AI model → printability check → hidden draft</strong>
+          <p>No copyrighted characters, logos, or unsafe objects. Clean, useful, giftable PLA designs only.</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Website request</h2>
+        <form class="custom-form" data-custom-form>
+          <label>Name<input name="name" required /></label>
+          <label>Email<input name="email" type="email" required /></label>
+          <label>Preferred color<input name="color" placeholder="Black, red, rainbow, surprise me..." /></label>
+          <label>Approx size<input name="size" placeholder="Fits on a desk, keychain size, 6 inches tall..." /></label>
+          <label class="wide">What should we make?<textarea name="idea" required rows="5" placeholder="Describe the custom item you want."></textarea></label>
+          <button type="submit">Send request</button>
+        </form>
+        <p class="form-status" data-form-status></p>
+      </section>
+
+      <section class="panel">
+        <h2>After payment</h2>
+        <form class="custom-form" data-meshy-form>
+          <label>Email<input name="email" type="email" required /></label>
+          <label>Payment confirmation<input name="paymentConfirmation" required placeholder="Order number or receipt id" /></label>
+          <label class="wide">Meshy design prompt<textarea name="prompt" required rows="4" placeholder="A cute desk name plate shaped like a cloud, printable in PLA..."></textarea></label>
+          <button type="submit">Start Meshy preview</button>
+        </form>
+        <p class="form-status" data-meshy-status></p>
+      </section>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
