@@ -4,9 +4,9 @@ Public service name:
 
 `augnach-ai-custom-flow-20260714a`
 
-Expected public URL:
+Live public URL:
 
-`https://augnach-ai-custom-flow-20260714a.onrender.com`
+`https://augnach-showcase.onrender.com`
 
 ## Pre-Deploy
 
@@ -29,7 +29,7 @@ Use `render.yaml` in this folder as the service blueprint, or create a Render We
 Environment variables:
 
 ```text
-PUBLIC_BASE_URL=https://augnach-ai-custom-flow-20260714a.onrender.com
+PUBLIC_BASE_URL=https://augnach-showcase.onrender.com
 SHOP_BASE_URL=https://www.augnach.com
 CONTACT_EMAIL=375351feng@gmail.com
 CUSTOM_STARTER_CHECKOUT_URL=https://www.augnach.com/shop/p/custom-design-starter
@@ -44,10 +44,10 @@ AUTOMATION_SECRET=<strong random value>
 ## Post-Deploy Checks
 
 ```powershell
-Invoke-RestMethod "https://augnach-ai-custom-flow-20260714a.onrender.com/api/config"
-Invoke-RestMethod "https://augnach-ai-custom-flow-20260714a.onrender.com/api/catalog/search?q=dragon%20gift"
-Invoke-WebRequest "https://augnach-ai-custom-flow-20260714a.onrender.com/custom"
-Invoke-WebRequest "https://augnach-ai-custom-flow-20260714a.onrender.com/embed.js"
+Invoke-RestMethod "https://augnach-showcase.onrender.com/api/config"
+Invoke-RestMethod "https://augnach-showcase.onrender.com/api/catalog/search?q=dragon%20gift"
+Invoke-WebRequest "https://augnach-showcase.onrender.com/custom"
+Invoke-WebRequest "https://augnach-showcase.onrender.com/embed.js"
 ```
 
 ## Squarespace Code Block

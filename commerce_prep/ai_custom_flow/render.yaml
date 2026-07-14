@@ -11,7 +11,7 @@ services:
       - key: NODE_VERSION
         value: 20
       - key: PUBLIC_BASE_URL
-        value: https://augnach-ai-custom-flow-20260714a.onrender.com
+        value: https://augnach-showcase.onrender.com
       - key: SHOP_BASE_URL
         value: https://www.augnach.com
       - key: CONTACT_EMAIL

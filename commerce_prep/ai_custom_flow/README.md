@@ -16,7 +16,7 @@ Open `http://localhost:8795` for search and `http://localhost:8795/custom` for t
 
 Target service URL:
 
-`https://augnach-ai-custom-flow-20260714a.onrender.com`
+`https://augnach-showcase.onrender.com`
 
 See `DEPLOY_RENDER.md` for exact Render settings, env vars, and post-deploy checks.
 
