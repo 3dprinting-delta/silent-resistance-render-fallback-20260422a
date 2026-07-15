@@ -25,9 +25,9 @@ services:
       - key: ALLOWED_ORIGINS
         value: https://www.augnach.com,http://localhost:8795,http://127.0.0.1:8795
       - key: MESHY_ENABLE_LIVE_CALLS
-        value: false
+        value: true
       - key: MESHY_DAILY_AUTOMATION_ENABLED
-        value: false
+        value: true
       - key: MESHY_DAILY_CREDIT_ALLOWANCE
         value: 5
       - key: MESHY_API_KEY
