@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom 3D Print Design | Aug & Ach</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="custom-hero">
+        <div>
+          <p class="eyebrow">Custom 3D prints</p>
+          <h1>Pay, verify, then start an AI preview right here.</h1>
+          <p class="lede">
+            Start a custom design with a $5 Squarespace checkout. After payment, return here with your order number and email to unlock the text and image input box.
+          </p>
+          <div class="actions">
+            <a class="button primary" data-starter-link href="https://www.augnach.com/shop/p/custom-design-starter">Pay $5 on Squarespace</a>
+            <a class="button" data-mail-link href="mailto:augnach@gmail.com">Contact by Gmail</a>
+          </div>
+          <p class="setup-note" data-starter-note>
+            If the checkout product is not live yet, contact us by Gmail or the website form and we will help start your custom request.
+          </p>
+        </div>
+        <div class="preview-card">
+          <span>Meshy design preview</span>
+          <strong>Order verified -> prompt + image -> AI preview -> finish with Aug & Ach</strong>
+          <p>No copyrighted characters, logos, weapons, or unsafe objects. Clean, useful, giftable PLA designs only.</p>
+        </div>
+      </section>
+
+      <section class="flow-grid">
+        <article class="step-card">
+          <span class="step-number">1</span>
+          <h2>Verify your payment</h2>
+          <p>Enter the email and order number from the Custom Design Starter checkout.</p>
+          <form class="custom-form single" data-payment-form>
+            <label>Email used at checkout<input name="email" type="email" required autocomplete="email" /></label>
+            <label>Squarespace order number<input name="orderNumber" required placeholder="Example: 000123" /></label>
+            <button type="submit">Unlock AI preview</button>
+          </form>
+          <p class="form-status" data-payment-status></p>
+        </article>
+
+        <article class="step-card locked" data-design-panel>
+          <span class="step-number">2</span>
+          <h2>Start the AI preview</h2>
+          <p data-lock-message>Verify your $5 starter order to open the design inputs.</p>
+          <form class="custom-form single" data-meshy-form hidden>
+            <label class="wide">Describe the item<textarea name="prompt" required rows="5" placeholder="A personalized desk name plate shaped like a cloud, printable in PLA..."></textarea></label>
+            <label class="wide">Optional image reference<input name="referenceImage" type="file" accept="image/*" /></label>
+            <div class="image-preview" data-image-preview hidden></div>
+            <button type="submit">Start AI preview</button>
+          </form>
+          <p class="form-status" data-meshy-status></p>
+          <div class="finish-box" data-finish-box hidden>
+            <strong>Continue with Aug & Ach to finish the print.</strong>
+            <p>Send us your Meshy task id, size, color, and any changes you want before we make a printable product.</p>
+            <div class="actions">
+              <a class="button primary" data-mail-link href="mailto:augnach@gmail.com">Contact by Gmail</a>
+              <a class="button" href="#website-request">Use website form</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" id="website-request">
+        <h2>Website request</h2>
+        <form class="custom-form" data-custom-form>
+          <label>Name<input name="name" required /></label>
+          <label>Email<input name="email" type="email" required /></label>
+          <label>Preferred color<input name="color" placeholder="Black, red, rainbow, surprise me..." /></label>
+          <label>Approx size<input name="size" placeholder="Fits on a desk, keychain size, 6 inches tall..." /></label>
+          <label class="wide">What should we make?<textarea name="idea" required rows="5" placeholder="Describe the custom item you want."></textarea></label>
+          <button type="submit">Send request</button>
+        </form>
+        <p class="form-status" data-form-status></p>
+      </section>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

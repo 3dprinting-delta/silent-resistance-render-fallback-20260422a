@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: augnach-ai-custom-flow-20260714a
+    runtime: node
+    plan: starter
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/config
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PUBLIC_BASE_URL
+        value: https://augnach-showcase.onrender.com
+      - key: SHOP_BASE_URL
+        value: https://www.augnach.com
+      - key: CONTACT_EMAIL
+        value: augnach@gmail.com
+      - key: CUSTOM_STARTER_CHECKOUT_URL
+        value: https://www.augnach.com/shop/p/custom-design-starter
+      - key: CUSTOM_STARTER_PRODUCT_SLUG
+        value: custom-design-starter
+      - key: SQUARESPACE_ORDER_LOOKBACK_DAYS
+        value: 30
+      - key: ALLOWED_ORIGINS
+        value: https://www.augnach.com,http://localhost:8795,http://127.0.0.1:8795
+      - key: MESHY_ENABLE_LIVE_CALLS
+        value: true
+      - key: MESHY_DAILY_AUTOMATION_ENABLED
+        value: true
+      - key: AUGNACH_MESHY_LIVE_OVERRIDE
+        value: true
+      - key: AUGNACH_MESHY_DAILY_OVERRIDE
+        value: true
+      - key: MESHY_DAILY_CREDIT_ALLOWANCE
+        value: 5
+      - key: MESHY_API_KEY
+        sync: false
+      - key: SQUARESPACE_API_KEY
+        sync: false
+      - key: AUTOMATION_SECRET
+        generateValue: true

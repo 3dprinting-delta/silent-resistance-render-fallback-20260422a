@@ -1,10 +1,24 @@
 /*
 !/.gitignore
 !/frontend/
+!/commerce_prep/
+!/commerce_prep/ai_custom_flow/
+!/commerce_prep/ai_custom_flow/**
+!/pc-protection-agent/
+!/pc-protection-agent/**
+!/pc-protection-agent.Tests/
+!/pc-protection-agent.Tests/**
 
+/commerce_prep/ai_custom_flow/data/*
+!/commerce_prep/ai_custom_flow/data/.gitignore
 /frontend/node_modules/
 /frontend/.next/
 /frontend/.runtime/
 /frontend/.env*
 !/frontend/.env.example
 /frontend/*.log
+/pc-protection-agent/bin/
+/pc-protection-agent/obj/
+/pc-protection-agent/*.log
+/pc-protection-agent.Tests/bin/
+/pc-protection-agent.Tests/obj/
