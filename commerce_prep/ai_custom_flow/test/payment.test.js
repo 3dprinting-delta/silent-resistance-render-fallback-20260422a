@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { findVerifiedStarterOrder, verifySquarespaceStarterPayment } from "../src/squarespace.js";
+import { fetchRecentSquarespaceOrders, findVerifiedStarterOrder, verifySquarespaceStarterPayment } from "../src/squarespace.js";
 
 const starterOrder = {
   id: "order-1",
@@ -67,4 +67,22 @@ test("payment verifier reports Squarespace API failure", async () => {
     }),
     /bad key/,
   );
+});
+
+test("Squarespace order lookup sends both modified date bounds", async () => {
+  let requestedUrl = "";
+  await fetchRecentSquarespaceOrders({
+    apiKey: "test",
+    now: new Date("2026-07-15T12:00:00.000Z"),
+    fetchImpl: async (url) => {
+      requestedUrl = String(url);
+      return new Response(JSON.stringify({ orders: [] }), {
+        status: 200,
+        headers: { "content-type": "application/json" },
+      });
+    },
+  });
+  const params = new URL(requestedUrl).searchParams;
+  assert.equal(params.get("modifiedAfter"), "2026-06-15T12:00:00.000Z");
+  assert.equal(params.get("modifiedBefore"), "2026-07-15T12:00:00.000Z");
 });

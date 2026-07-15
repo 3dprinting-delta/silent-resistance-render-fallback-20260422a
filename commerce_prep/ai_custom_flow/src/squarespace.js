@@ -73,10 +73,12 @@ export async function fetchRecentSquarespaceOrders({
   const orders = [];
   let cursor = "";
   const modifiedAfter = new Date(now.getTime() - Number(lookbackDays) * 24 * 60 * 60 * 1000).toISOString();
+  const modifiedBefore = now.toISOString();
 
   for (let page = 0; page < maxPages; page += 1) {
     const url = new URL(ORDERS_API);
     url.searchParams.set("modifiedAfter", modifiedAfter);
+    url.searchParams.set("modifiedBefore", modifiedBefore);
     if (cursor) url.searchParams.set("cursor", cursor);
     const response = await fetchImpl(url, {
       headers: {
