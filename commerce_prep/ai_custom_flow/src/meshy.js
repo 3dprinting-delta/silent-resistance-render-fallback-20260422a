@@ -3,13 +3,17 @@ import path from "node:path";
 
 const MESHY_API = "https://api.meshy.ai/openapi/v2/text-to-3d";
 
+function liveMeshyEnabled() {
+  return process.env.AUGNACH_MESHY_LIVE_OVERRIDE === "true" || process.env.MESHY_ENABLE_LIVE_CALLS === "true";
+}
+
 async function saveTask(dataDir, task) {
   await mkdir(path.join(dataDir, "meshy_tasks"), { recursive: true });
   await writeFile(path.join(dataDir, "meshy_tasks", `${task.id}.json`), JSON.stringify(task, null, 2));
 }
 
 export async function createMeshyPreviewTask({ prompt, customerEmail, paymentConfirmation, referenceImageName, dataDir }) {
-  const live = process.env.MESHY_ENABLE_LIVE_CALLS === "true";
+  const live = liveMeshyEnabled();
   const apiKey = process.env.MESHY_API_KEY;
   if (!live || !apiKey) {
     const task = {
@@ -78,7 +82,7 @@ export async function getMeshyTask({ id, dataDir }) {
     const filePath = path.join(dataDir, "meshy_tasks", `${id}.json`);
     return JSON.parse(await readFile(filePath, "utf8"));
   }
-  if (process.env.MESHY_ENABLE_LIVE_CALLS !== "true" || !process.env.MESHY_API_KEY) {
+  if (!liveMeshyEnabled() || !process.env.MESHY_API_KEY) {
     return {
       id,
       live: false,

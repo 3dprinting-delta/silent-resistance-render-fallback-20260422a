@@ -28,6 +28,10 @@ services:
         value: true
       - key: MESHY_DAILY_AUTOMATION_ENABLED
         value: true
+      - key: AUGNACH_MESHY_LIVE_OVERRIDE
+        value: true
+      - key: AUGNACH_MESHY_DAILY_OVERRIDE
+        value: true
       - key: MESHY_DAILY_CREDIT_ALLOWANCE
         value: 5
       - key: MESHY_API_KEY

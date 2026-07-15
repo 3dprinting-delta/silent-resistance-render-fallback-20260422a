@@ -24,6 +24,9 @@ const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || `${SHOP_BASE_URL},http:/
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
+const liveMeshyEnabled = () => process.env.AUGNACH_MESHY_LIVE_OVERRIDE === "true" || process.env.MESHY_ENABLE_LIVE_CALLS === "true";
+const dailyMeshyAutomationEnabled = () =>
+  process.env.AUGNACH_MESHY_DAILY_OVERRIDE === "true" || process.env.MESHY_DAILY_AUTOMATION_ENABLED === "true";
 
 const JSON_HEADERS = {
   "content-type": "application/json; charset=utf-8",
@@ -146,8 +149,8 @@ async function handleApi(req, res, url) {
       paymentVerificationConfigured: Boolean(process.env.SQUARESPACE_API_KEY),
       orderLookbackDays: SQUARESPACE_ORDER_LOOKBACK_DAYS,
       allowedOrigins: ALLOWED_ORIGINS,
-      liveMeshyEnabled: process.env.MESHY_ENABLE_LIVE_CALLS === "true",
-      dailyMeshyAutomationEnabled: process.env.MESHY_DAILY_AUTOMATION_ENABLED === "true",
+      liveMeshyEnabled: liveMeshyEnabled(),
+      dailyMeshyAutomationEnabled: dailyMeshyAutomationEnabled(),
       dailyMeshyCreditAllowance: MESHY_DAILY_CREDIT_ALLOWANCE,
     });
   }
@@ -287,7 +290,7 @@ async function handleApi(req, res, url) {
       dryRun:
         body.dryRun !== undefined
           ? Boolean(body.dryRun)
-          : process.env.MESHY_DAILY_AUTOMATION_ENABLED !== "true" || !creditState.canSpend,
+          : !dailyMeshyAutomationEnabled() || !creditState.canSpend,
       startMeshyTask: async (prompt) =>
         createMeshyPreviewTask({
           prompt,
