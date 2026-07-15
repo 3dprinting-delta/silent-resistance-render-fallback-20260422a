@@ -15,18 +15,24 @@ services:
       - key: SHOP_BASE_URL
         value: https://www.augnach.com
       - key: CONTACT_EMAIL
-        value: 375351feng@gmail.com
+        value: augnach@gmail.com
       - key: CUSTOM_STARTER_CHECKOUT_URL
         value: https://www.augnach.com/shop/p/custom-design-starter
+      - key: CUSTOM_STARTER_PRODUCT_SLUG
+        value: custom-design-starter
+      - key: SQUARESPACE_ORDER_LOOKBACK_DAYS
+        value: 30
       - key: ALLOWED_ORIGINS
         value: https://www.augnach.com,http://localhost:8795,http://127.0.0.1:8795
       - key: MESHY_ENABLE_LIVE_CALLS
-        value: true
+        value: false
       - key: MESHY_DAILY_AUTOMATION_ENABLED
-        value: true
-      - key: MESHY_DAILY_CREDIT_BUDGET
+        value: false
+      - key: MESHY_DAILY_CREDIT_ALLOWANCE
         value: 5
       - key: MESHY_API_KEY
+        sync: false
+      - key: SQUARESPACE_API_KEY
         sync: false
       - key: AUTOMATION_SECRET
         generateValue: true

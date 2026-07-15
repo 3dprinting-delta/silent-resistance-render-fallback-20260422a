@@ -60,9 +60,18 @@ async function setupSearch() {
 async function setupCustom() {
   const cfg = await config();
   const starter = $("[data-starter-link]");
-  const mail = $("[data-mail-link]");
-  if (starter) starter.href = cfg.starterCheckoutUrl;
-  if (mail) mail.href = `mailto:${cfg.contactEmail}`;
+  const starterNote = $("[data-starter-note]");
+  const mailLinks = document.querySelectorAll("[data-mail-link]");
+  if (starter && cfg.starterCheckoutConfigured && cfg.starterCheckoutUrl) {
+    starter.href = cfg.starterCheckoutUrl;
+    starter.hidden = false;
+  } else if (starter) {
+    starter.hidden = true;
+    if (starterNote) starterNote.hidden = false;
+  }
+  mailLinks.forEach((mail) => {
+    mail.href = `mailto:${cfg.contactEmail}`;
+  });
 
   const requestForm = $("[data-custom-form]");
   const requestStatus = $("[data-form-status]");
@@ -83,12 +92,79 @@ async function setupCustom() {
     });
   }
 
+  const paymentForm = $("[data-payment-form]");
+  const paymentStatus = $("[data-payment-status]");
+  const designPanel = $("[data-design-panel]");
+  const lockMessage = $("[data-lock-message]");
   const meshyForm = $("[data-meshy-form]");
   const meshyStatus = $("[data-meshy-status]");
+  const imageInput = meshyForm?.querySelector('input[name="referenceImage"]');
+  const imagePreview = $("[data-image-preview]");
+  const finishBox = $("[data-finish-box]");
+  let verifiedPayment = null;
+
+  function unlockDesign(verification) {
+    verifiedPayment = verification;
+    if (designPanel) designPanel.classList.remove("locked");
+    if (lockMessage) {
+      lockMessage.textContent = `Payment verified for order ${verification.orderNumber}. Add your prompt and optional image reference.`;
+    }
+    if (meshyForm) {
+      meshyForm.hidden = false;
+      const emailField = paymentForm?.elements.email;
+      if (emailField && !meshyForm.dataset.email) meshyForm.dataset.email = emailField.value;
+    }
+  }
+
+  if (paymentForm) {
+    paymentForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const body = Object.fromEntries(new FormData(paymentForm).entries());
+      paymentStatus.textContent = "Checking your Squarespace order...";
+      const response = await fetch("/api/custom-payment/verify", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const payload = await response.json();
+      if (!payload.ok) {
+        paymentStatus.textContent = payload.error || `Could not verify payment. Contact ${payload.contactEmail || cfg.contactEmail}.`;
+        return;
+      }
+      paymentStatus.textContent = "Payment verified. Your AI preview is unlocked.";
+      unlockDesign(payload);
+    });
+  }
+
+  if (imageInput && imagePreview) {
+    imageInput.addEventListener("change", () => {
+      const file = imageInput.files?.[0];
+      if (!file) {
+        imagePreview.hidden = true;
+        imagePreview.textContent = "";
+        return;
+      }
+      imagePreview.hidden = false;
+      imagePreview.textContent = `Reference image selected: ${file.name}`;
+    });
+  }
+
   if (meshyForm) {
     meshyForm.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const body = Object.fromEntries(new FormData(meshyForm).entries());
+      if (!verifiedPayment?.verificationToken) {
+        meshyStatus.textContent = "Please verify your payment before starting the preview.";
+        return;
+      }
+      const formData = new FormData(meshyForm);
+      const image = formData.get("referenceImage");
+      const body = {
+        prompt: String(formData.get("prompt") || ""),
+        email: verifiedPayment.email,
+        paymentConfirmation: verifiedPayment.orderNumber,
+        paymentVerificationToken: verifiedPayment.verificationToken,
+        referenceImageName: image?.name || "",
+      };
       meshyStatus.textContent = "Starting Meshy preview...";
       const payload = await fetch("/api/meshy/start", {
         method: "POST",
@@ -98,7 +174,18 @@ async function setupCustom() {
       meshyStatus.textContent = payload.ok
         ? `Meshy task ${payload.id} saved with status ${payload.status}.`
         : payload.error || "Could not start Meshy task.";
-      if (payload.ok) meshyForm.reset();
+      if (payload.ok) {
+        meshyForm.reset();
+        if (imagePreview) imagePreview.hidden = true;
+        if (finishBox) finishBox.hidden = false;
+        for (let attempts = 0; attempts < 8; attempts += 1) {
+          await new Promise((resolve) => window.setTimeout(resolve, 2500));
+          const statusPayload = await fetch(`/api/meshy/status/${encodeURIComponent(payload.id)}`).then((res) => res.json());
+          const status = statusPayload.status || statusPayload.task?.status || statusPayload.task?.result?.status || "submitted";
+          meshyStatus.textContent = `Meshy task ${payload.id}: ${status}. Continue by contacting us to finish.`;
+          if (/succeed|complete|failed|error/i.test(status)) break;
+        }
+      }
     });
   }
 }

@@ -8,7 +8,7 @@ async function saveTask(dataDir, task) {
   await writeFile(path.join(dataDir, "meshy_tasks", `${task.id}.json`), JSON.stringify(task, null, 2));
 }
 
-export async function createMeshyPreviewTask({ prompt, customerEmail, paymentConfirmation, dataDir }) {
+export async function createMeshyPreviewTask({ prompt, customerEmail, paymentConfirmation, referenceImageName, dataDir }) {
   const live = process.env.MESHY_ENABLE_LIVE_CALLS === "true";
   const apiKey = process.env.MESHY_API_KEY;
   if (!live || !apiKey) {
@@ -19,6 +19,7 @@ export async function createMeshyPreviewTask({ prompt, customerEmail, paymentCon
       prompt,
       customerEmail,
       paymentConfirmation,
+      referenceImageName,
       message: "Dry run saved. Set MESHY_ENABLE_LIVE_CALLS=true and MESHY_API_KEY to spend credits.",
       createdAt: new Date().toISOString(),
     };
@@ -50,6 +51,7 @@ export async function createMeshyPreviewTask({ prompt, customerEmail, paymentCon
       prompt,
       customerEmail,
       paymentConfirmation,
+      referenceImageName,
       error: payload.message || payload.error || `Meshy returned HTTP ${response.status}`,
       createdAt: new Date().toISOString(),
     };
@@ -64,6 +66,7 @@ export async function createMeshyPreviewTask({ prompt, customerEmail, paymentCon
     prompt,
     customerEmail,
     paymentConfirmation,
+    referenceImageName,
     createdAt: new Date().toISOString(),
   };
   await saveTask(dataDir, task);

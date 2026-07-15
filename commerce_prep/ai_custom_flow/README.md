@@ -26,8 +26,9 @@ Copy `.env.example` into the hosting provider settings. Keep `MESHY_API_KEY` ser
 
 Important production settings:
 
-- `MESHY_ENABLE_LIVE_CALLS=true` allows paid customer Meshy starts after payment confirmation is supplied.
-- `MESHY_DAILY_AUTOMATION_ENABLED=true` allows hidden daily draft generation within `MESHY_DAILY_CREDIT_BUDGET`.
+- `SQUARESPACE_API_KEY` verifies Custom Design Starter orders before Meshy preview unlocks.
+- `MESHY_ENABLE_LIVE_CALLS=true` allows paid customer Meshy starts only after payment verification succeeds.
+- `MESHY_DAILY_AUTOMATION_ENABLED=true` allows hidden daily draft generation within `MESHY_DAILY_CREDIT_ALLOWANCE`.
 - `CUSTOM_STARTER_CHECKOUT_URL` should point to the live Squarespace `$5` starter product once it exists.
 - `ALLOWED_ORIGINS` must include `https://www.augnach.com` and local dev origins.
 
@@ -39,6 +40,7 @@ Use `squarespace-embed.html` as the ready-to-paste Code Block template.
 
 - `GET /api/catalog/search?q=dragon`
 - `POST /api/custom-requests`
+- `POST /api/custom-payment/verify`
 - `POST /api/meshy/start`
 - `GET /api/meshy/status/:id`
 - `POST /api/automation/daily-meshy`

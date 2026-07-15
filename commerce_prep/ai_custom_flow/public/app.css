@@ -195,10 +195,57 @@ button,
   margin-top: 20px;
 }
 
+.setup-note,
+.finish-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-top: 16px;
+  padding: 14px;
+}
+
+.flow-grid {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 28px 0;
+}
+
+.step-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.step-card.locked {
+  background: #f9f4ed;
+}
+
+.step-number {
+  align-items: center;
+  background: var(--sun);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  font-weight: 900;
+  height: 30px;
+  justify-content: center;
+  margin-bottom: 12px;
+  width: 30px;
+}
+
 .custom-form {
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.custom-form.single {
+  grid-template-columns: 1fr;
 }
 
 label {
@@ -221,9 +268,17 @@ label {
   padding: 20px;
 }
 
+.image-preview {
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 12px;
+}
+
 @media (max-width: 720px) {
   .custom-hero,
   .custom-form,
+  .flow-grid,
   .search {
     grid-template-columns: 1fr;
   }
