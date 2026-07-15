@@ -24,9 +24,8 @@ const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || `${SHOP_BASE_URL},http:/
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
-const liveMeshyEnabled = () => process.env.AUGNACH_MESHY_LIVE_OVERRIDE === "true" || process.env.MESHY_ENABLE_LIVE_CALLS === "true";
-const dailyMeshyAutomationEnabled = () =>
-  process.env.AUGNACH_MESHY_DAILY_OVERRIDE === "true" || process.env.MESHY_DAILY_AUTOMATION_ENABLED === "true";
+const liveMeshyEnabled = () => Boolean(process.env.MESHY_API_KEY);
+const dailyMeshyAutomationEnabled = () => Boolean(process.env.MESHY_API_KEY);
 
 const JSON_HEADERS = {
   "content-type": "application/json; charset=utf-8",

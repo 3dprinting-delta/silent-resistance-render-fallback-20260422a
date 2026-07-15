@@ -4,7 +4,7 @@ import path from "node:path";
 const MESHY_API = "https://api.meshy.ai/openapi/v2/text-to-3d";
 
 function liveMeshyEnabled() {
-  return process.env.AUGNACH_MESHY_LIVE_OVERRIDE === "true" || process.env.MESHY_ENABLE_LIVE_CALLS === "true";
+  return Boolean(process.env.MESHY_API_KEY);
 }
 
 async function saveTask(dataDir, task) {
