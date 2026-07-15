@@ -152,6 +152,11 @@ export async function loadCatalog({ rootDir, shopBaseUrl }) {
   const sourceRows = catalogFile ? parseCsv(catalogFile.text) : [];
   const auditRows = auditFile ? parseCsv(auditFile.text) : [];
   const auditBySlug = new Map(auditRows.map((row) => [row.slug || row["Product URL"], row]));
+  const auditByTitle = new Map(
+    auditRows
+      .filter((row) => row.title)
+      .map((row) => [String(row.title).trim().toLowerCase(), row]),
+  );
   const seen = new Set();
   const products = [];
 
@@ -159,16 +164,17 @@ export async function loadCatalog({ rootDir, shopBaseUrl }) {
     const slug = row["Product URL"] || slugify(row.Title);
     if (!slug || seen.has(slug)) continue;
     seen.add(slug);
-    const audit = auditBySlug.get(slug) || {};
-    const title = row.Title || audit.title || slug.replace(/-/g, " ");
+    const title = row.Title || slug.replace(/-/g, " ");
+    const audit = auditBySlug.get(slug) || auditByTitle.get(String(title).trim().toLowerCase()) || {};
+    const publicSlug = audit.slug || slug;
     const categories = row.Categories || "";
     const tags = row.Tags || "";
     const description = stripHtml(row.Description);
     const image = imageFrom(row["Hosted Image URLs"]) || imageFrom(audit.sample_product_images);
-    const url = audit.url || `${shopBaseUrl}/shop/p/${slug}`;
-    const searchText = [title, description, categories, tags, slug].join(" ");
+    const url = audit.url || `${shopBaseUrl}/shop/p/${publicSlug}`;
+    const searchText = [title, description, categories, tags, slug, publicSlug].join(" ");
     products.push({
-      slug,
+      slug: publicSlug,
       title,
       url,
       image,

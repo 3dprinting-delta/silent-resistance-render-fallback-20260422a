@@ -13,6 +13,10 @@ test("catalog search ranks exact product names", async () => {
   const results = searchCatalog(catalog.products, "Articulated Dragon", { limit: 3 });
   assert.ok(results.length > 0);
   assert.match(results[0].title, /dragon/i);
+  assert.equal(
+    results[0].url,
+    "https://www.augnach.com/shop/p/3d-printed-articulated-dragon-flexible-fidget-toy-desk-display",
+  );
 });
 
 test("catalog search handles broad customer intent", async () => {

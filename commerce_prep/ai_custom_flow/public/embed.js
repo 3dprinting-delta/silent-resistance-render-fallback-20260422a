@@ -6,14 +6,16 @@
 
   target.innerHTML = `
     <style>
-      .aa-search{border:1px solid #ded2c2;border-radius:8px;padding:16px;background:#fffaf4;color:#1c1917;font-family:Inter,system-ui,sans-serif}
+      #augnach-ai-search{display:block;width:92vw;max-width:1120px}
+      .aa-search{box-sizing:border-box;width:100%;border:1px solid #ded2c2;border-radius:8px;padding:18px;background:#fffaf4;color:#1c1917;font-family:Inter,system-ui,sans-serif;box-shadow:0 10px 28px rgba(28,25,23,.08)}
       .aa-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
-      .aa-search input,.aa-search button{border:1px solid #ded2c2;border-radius:8px;min-height:44px;padding:10px;font:inherit}
+      .aa-search input,.aa-search button{box-sizing:border-box;border:1px solid #ded2c2;border-radius:8px;min-height:52px;padding:12px 14px;font:inherit}
+      .aa-search input{font-size:16px;width:100%}
       .aa-search button{background:#177c72;color:white;font-weight:800;cursor:pointer}
       .aa-results{display:grid;gap:10px;margin-top:12px}
       .aa-card{border-top:1px solid #ded2c2;padding-top:10px}
       .aa-card a{color:#0f5f58;font-weight:800}
-      @media(max-width:640px){.aa-row{grid-template-columns:1fr}}
+      @media(max-width:640px){#augnach-ai-search{width:calc(100vw - 32px)}.aa-row{grid-template-columns:1fr}}
     </style>
     <div class="aa-search">
       <form class="aa-row">
